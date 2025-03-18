@@ -11,5 +11,12 @@ namespace Hospital_Management_System
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            control_panel obj = new control_panel();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

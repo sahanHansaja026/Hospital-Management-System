@@ -106,6 +106,7 @@
             button1.TabIndex = 8;
             button1.Text = "L O G I N";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // Landing
             // 
