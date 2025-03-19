@@ -123,6 +123,8 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Landing";
             Text = "MediLink";
+            TopMost = true;
+            WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);

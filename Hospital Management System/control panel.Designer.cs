@@ -281,6 +281,8 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "control_panel";
             Text = "MediLink";
+            TopMost = true;
+            WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
             PerformLayout();
         }
