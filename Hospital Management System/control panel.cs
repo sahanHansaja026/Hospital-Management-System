@@ -16,5 +16,40 @@ namespace Hospital_Management_System
         {
             InitializeComponent();
         }
+
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void patients_Click(object sender, EventArgs e)
+        {
+            Patients obj = new Patients();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void doctors_Click(object sender, EventArgs e)
+        {
+            Doctors obj = new Doctors();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Patients obj = new Patients();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void Doctorslbl_Click(object sender, EventArgs e)
+        {
+            Doctors obj = new Doctors();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

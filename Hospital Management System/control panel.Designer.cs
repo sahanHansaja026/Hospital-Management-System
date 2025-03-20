@@ -31,22 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(control_panel));
             panel1 = new Panel();
             patients = new Button();
-            label1 = new Label();
-            label2 = new Label();
+            Patientslbl = new Label();
+            Doctorslbl = new Label();
             doctors = new Button();
             department = new Button();
-            label3 = new Label();
-            label4 = new Label();
+            Departmentlbl = new Label();
+            reportslbl = new Label();
             report = new Button();
-            label5 = new Label();
+            stafflbl = new Label();
             staff = new Button();
-            label6 = new Label();
+            accountlbl = new Label();
             account = new Button();
-            label7 = new Label();
+            userlbl = new Label();
             users = new Button();
             appointments = new Button();
-            label8 = new Label();
+            appointmentslbl = new Label();
             panel2 = new Panel();
+            LogOut = new Label();
             SuspendLayout();
             // 
             // panel1
@@ -55,7 +56,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1704, 13);
+            panel1.Size = new Size(1786, 13);
             panel1.TabIndex = 0;
             // 
             // patients
@@ -66,33 +67,36 @@
             patients.FlatAppearance.BorderSize = 2;
             patients.FlatAppearance.MouseDownBackColor = Color.Black;
             patients.FlatAppearance.MouseOverBackColor = Color.Black;
-            patients.Location = new Point(93, 50);
+            patients.Location = new Point(93, 100);
             patients.Name = "patients";
             patients.Size = new Size(347, 191);
             patients.TabIndex = 2;
             patients.UseVisualStyleBackColor = true;
+            patients.Click += patients_Click;
             // 
-            // label1
+            // Patientslbl
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(184, 244);
-            label1.Name = "label1";
-            label1.Size = new Size(137, 39);
-            label1.TabIndex = 6;
-            label1.Text = "Patients";
+            Patientslbl.AutoSize = true;
+            Patientslbl.BackColor = Color.Transparent;
+            Patientslbl.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Patientslbl.Location = new Point(184, 294);
+            Patientslbl.Name = "Patientslbl";
+            Patientslbl.Size = new Size(137, 39);
+            Patientslbl.TabIndex = 6;
+            Patientslbl.Text = "Patients";
+            Patientslbl.Click += label1_Click;
             // 
-            // label2
+            // Doctorslbl
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(661, 244);
-            label2.Name = "label2";
-            label2.Size = new Size(132, 39);
-            label2.TabIndex = 7;
-            label2.Text = "Doctors";
+            Doctorslbl.AutoSize = true;
+            Doctorslbl.BackColor = Color.Transparent;
+            Doctorslbl.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Doctorslbl.Location = new Point(661, 294);
+            Doctorslbl.Name = "Doctorslbl";
+            Doctorslbl.Size = new Size(132, 39);
+            Doctorslbl.TabIndex = 7;
+            Doctorslbl.Text = "Doctors";
+            Doctorslbl.Click += Doctorslbl_Click;
             // 
             // doctors
             // 
@@ -100,11 +104,12 @@
             doctors.BackgroundImageLayout = ImageLayout.Zoom;
             doctors.FlatAppearance.BorderColor = Color.Black;
             doctors.FlatAppearance.BorderSize = 2;
-            doctors.Location = new Point(557, 50);
+            doctors.Location = new Point(557, 100);
             doctors.Name = "doctors";
             doctors.Size = new Size(347, 191);
             doctors.TabIndex = 8;
             doctors.UseVisualStyleBackColor = true;
+            doctors.Click += doctors_Click;
             // 
             // department
             // 
@@ -112,33 +117,33 @@
             department.BackgroundImageLayout = ImageLayout.Zoom;
             department.FlatAppearance.BorderColor = Color.Black;
             department.FlatAppearance.BorderSize = 2;
-            department.Location = new Point(1011, 50);
+            department.Location = new Point(1011, 100);
             department.Name = "department";
             department.Size = new Size(347, 191);
             department.TabIndex = 9;
             department.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // Departmentlbl
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(1085, 244);
-            label3.Name = "label3";
-            label3.Size = new Size(206, 39);
-            label3.TabIndex = 10;
-            label3.Text = "Departments";
+            Departmentlbl.AutoSize = true;
+            Departmentlbl.BackColor = Color.Transparent;
+            Departmentlbl.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Departmentlbl.Location = new Point(1085, 294);
+            Departmentlbl.Name = "Departmentlbl";
+            Departmentlbl.Size = new Size(206, 39);
+            Departmentlbl.TabIndex = 10;
+            Departmentlbl.Text = "Departments";
             // 
-            // label4
+            // reportslbl
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(1583, 244);
-            label4.Name = "label4";
-            label4.Size = new Size(133, 39);
-            label4.TabIndex = 12;
-            label4.Text = "Reports";
+            reportslbl.AutoSize = true;
+            reportslbl.BackColor = Color.Transparent;
+            reportslbl.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            reportslbl.Location = new Point(1583, 294);
+            reportslbl.Name = "reportslbl";
+            reportslbl.Size = new Size(133, 39);
+            reportslbl.TabIndex = 12;
+            reportslbl.Text = "Reports";
             // 
             // report
             // 
@@ -146,22 +151,22 @@
             report.BackgroundImageLayout = ImageLayout.Zoom;
             report.FlatAppearance.BorderColor = Color.Black;
             report.FlatAppearance.BorderSize = 2;
-            report.Location = new Point(1458, 50);
+            report.Location = new Point(1458, 100);
             report.Name = "report";
             report.Size = new Size(347, 191);
             report.TabIndex = 11;
             report.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // stafflbl
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(216, 643);
-            label5.Name = "label5";
-            label5.Size = new Size(86, 39);
-            label5.TabIndex = 14;
-            label5.Text = "Staff";
+            stafflbl.AutoSize = true;
+            stafflbl.BackColor = Color.Transparent;
+            stafflbl.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            stafflbl.Location = new Point(216, 693);
+            stafflbl.Name = "stafflbl";
+            stafflbl.Size = new Size(86, 39);
+            stafflbl.TabIndex = 14;
+            stafflbl.Text = "Staff";
             // 
             // staff
             // 
@@ -171,22 +176,22 @@
             staff.FlatAppearance.BorderSize = 2;
             staff.FlatAppearance.MouseDownBackColor = Color.Black;
             staff.FlatAppearance.MouseOverBackColor = Color.Black;
-            staff.Location = new Point(93, 449);
+            staff.Location = new Point(93, 499);
             staff.Name = "staff";
             staff.Size = new Size(347, 191);
             staff.TabIndex = 13;
             staff.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // accountlbl
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
-            label6.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(1583, 643);
-            label6.Name = "label6";
-            label6.Size = new Size(139, 39);
-            label6.TabIndex = 20;
-            label6.Text = "Account";
+            accountlbl.AutoSize = true;
+            accountlbl.BackColor = Color.Transparent;
+            accountlbl.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            accountlbl.Location = new Point(1583, 693);
+            accountlbl.Name = "accountlbl";
+            accountlbl.Size = new Size(139, 39);
+            accountlbl.TabIndex = 20;
+            accountlbl.Text = "Account";
             // 
             // account
             // 
@@ -194,22 +199,22 @@
             account.BackgroundImageLayout = ImageLayout.Zoom;
             account.FlatAppearance.BorderColor = Color.Black;
             account.FlatAppearance.BorderSize = 2;
-            account.Location = new Point(1458, 449);
+            account.Location = new Point(1458, 499);
             account.Name = "account";
             account.Size = new Size(347, 191);
             account.TabIndex = 19;
             account.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // userlbl
             // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(1133, 643);
-            label7.Name = "label7";
-            label7.Size = new Size(105, 39);
-            label7.TabIndex = 18;
-            label7.Text = "Users";
+            userlbl.AutoSize = true;
+            userlbl.BackColor = Color.Transparent;
+            userlbl.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            userlbl.Location = new Point(1133, 693);
+            userlbl.Name = "userlbl";
+            userlbl.Size = new Size(105, 39);
+            userlbl.TabIndex = 18;
+            userlbl.Text = "Users";
             // 
             // users
             // 
@@ -217,7 +222,7 @@
             users.BackgroundImageLayout = ImageLayout.Zoom;
             users.FlatAppearance.BorderColor = Color.Black;
             users.FlatAppearance.BorderSize = 2;
-            users.Location = new Point(1011, 449);
+            users.Location = new Point(1011, 499);
             users.Name = "users";
             users.Size = new Size(347, 191);
             users.TabIndex = 17;
@@ -229,53 +234,66 @@
             appointments.BackgroundImageLayout = ImageLayout.Zoom;
             appointments.FlatAppearance.BorderColor = Color.Black;
             appointments.FlatAppearance.BorderSize = 2;
-            appointments.Location = new Point(557, 449);
+            appointments.Location = new Point(557, 499);
             appointments.Name = "appointments";
             appointments.Size = new Size(347, 191);
             appointments.TabIndex = 16;
             appointments.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // appointmentslbl
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(613, 643);
-            label8.Name = "label8";
-            label8.Size = new Size(219, 39);
-            label8.TabIndex = 15;
-            label8.Text = "Appointments";
+            appointmentslbl.AutoSize = true;
+            appointmentslbl.BackColor = Color.Transparent;
+            appointmentslbl.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            appointmentslbl.Location = new Point(613, 693);
+            appointmentslbl.Name = "appointmentslbl";
+            appointmentslbl.Size = new Size(219, 39);
+            appointmentslbl.TabIndex = 15;
+            appointmentslbl.Text = "Appointments";
             // 
             // panel2
             // 
             panel2.BackColor = Color.Red;
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 716);
+            panel2.Location = new Point(0, 750);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1704, 39);
+            panel2.Size = new Size(1786, 39);
             panel2.TabIndex = 21;
+            // 
+            // LogOut
+            // 
+            LogOut.AutoSize = true;
+            LogOut.Font = new Font("Arial Narrow", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LogOut.ForeColor = Color.Red;
+            LogOut.Location = new Point(1601, 35);
+            LogOut.Name = "LogOut";
+            LogOut.Size = new Size(185, 40);
+            LogOut.TabIndex = 22;
+            LogOut.Text = "L O G  O U T";
+            LogOut.Click += LogOut_Click;
             // 
             // control_panel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1704, 755);
+            ClientSize = new Size(1786, 789);
+            Controls.Add(LogOut);
             Controls.Add(panel2);
-            Controls.Add(label6);
+            Controls.Add(accountlbl);
             Controls.Add(account);
-            Controls.Add(label7);
+            Controls.Add(userlbl);
             Controls.Add(users);
             Controls.Add(appointments);
-            Controls.Add(label8);
-            Controls.Add(label5);
+            Controls.Add(appointmentslbl);
+            Controls.Add(stafflbl);
             Controls.Add(staff);
-            Controls.Add(label4);
+            Controls.Add(reportslbl);
             Controls.Add(report);
-            Controls.Add(label3);
+            Controls.Add(Departmentlbl);
             Controls.Add(department);
             Controls.Add(doctors);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(Doctorslbl);
+            Controls.Add(Patientslbl);
             Controls.Add(patients);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -291,21 +309,22 @@
 
         private Panel panel1;
         private Button patients;
-        private Label label1;
-        private Label label2;
+        private Label Patientslbl;
+        private Label Doctorslbl;
         private Button doctors;
         private Button department;
-        private Label label3;
-        private Label label4;
+        private Label Departmentlbl;
+        private Label reportslbl;
         private Button report;
-        private Label label5;
+        private Label stafflbl;
         private Button staff;
-        private Label label6;
+        private Label accountlbl;
         private Button account;
-        private Label label7;
+        private Label userlbl;
         private Button users;
         private Button appointments;
-        private Label label8;
+        private Label appointmentslbl;
         private Panel panel2;
+        private Label LogOut;
     }
 }
