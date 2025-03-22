@@ -51,5 +51,19 @@ namespace Hospital_Management_System
             obj.Show();
             this.Hide();
         }
+
+        private void department_Click(object sender, EventArgs e)
+        {
+            Department obj = new Department();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void Departmentlbl_Click(object sender, EventArgs e)
+        {
+            Department obj = new Department();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

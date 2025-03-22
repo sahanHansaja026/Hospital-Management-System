@@ -122,6 +122,7 @@
             department.Size = new Size(347, 191);
             department.TabIndex = 9;
             department.UseVisualStyleBackColor = true;
+            department.Click += department_Click;
             // 
             // Departmentlbl
             // 
@@ -133,6 +134,7 @@
             Departmentlbl.Size = new Size(206, 39);
             Departmentlbl.TabIndex = 10;
             Departmentlbl.Text = "Departments";
+            Departmentlbl.Click += Departmentlbl_Click;
             // 
             // reportslbl
             // 
