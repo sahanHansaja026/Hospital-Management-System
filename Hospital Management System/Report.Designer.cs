@@ -221,7 +221,7 @@
             panel2.BackColor = Color.Red;
             panel2.Controls.Add(button2);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 974);
+            panel2.Location = new Point(0, 991);
             panel2.Name = "panel2";
             panel2.Size = new Size(1802, 39);
             panel2.TabIndex = 113;
@@ -295,7 +295,7 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoScroll = true;
-            ClientSize = new Size(1751, 1034);
+            ClientSize = new Size(1751, 1051);
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(submitbtn);

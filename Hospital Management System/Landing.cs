@@ -14,7 +14,7 @@ namespace Hospital_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            control_panel obj = new control_panel();
+            Login obj = new Login();
             obj.Show();
             this.Hide();
         }

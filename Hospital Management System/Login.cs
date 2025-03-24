@@ -15,6 +15,28 @@ namespace Hospital_Management_System
         public Login()
         {
             InitializeComponent();
+
+        }
+
+
+        private void loginbtn_Click(object sender, EventArgs e)
+        {
+            if (Emailcb.Text == "" || Passwordbox.Text == "")
+            {
+                MessageBox.Show("Missing Data !!");
+            }
+            else if (emailbox.Text == "Admin@mail.com" && Passwordbox.Text == "123")
+            {
+                control_panel Obj = new control_panel();
+                Obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Wrong Email and Password");
+                Passwordbox.Text = " ";
+                emailbox.Text = "";
+            }
         }
     }
 }

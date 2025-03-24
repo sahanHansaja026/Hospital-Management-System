@@ -35,11 +35,11 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
-            label4 = new Label();
+            emailbox = new TextBox();
+            Emailcb = new Label();
             label5 = new Label();
-            textBox2 = new TextBox();
-            button1 = new Button();
+            Passwordbox = new TextBox();
+            loginbtn = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -107,26 +107,26 @@
             pictureBox1.TabIndex = 43;
             pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // emailbox
             // 
-            textBox1.BackColor = Color.Silver;
-            textBox1.Font = new Font("Arial", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(36, 453);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Email Address ";
-            textBox1.Size = new Size(482, 50);
-            textBox1.TabIndex = 44;
+            emailbox.BackColor = Color.Silver;
+            emailbox.Font = new Font("Arial", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            emailbox.Location = new Point(36, 453);
+            emailbox.Name = "emailbox";
+            emailbox.PlaceholderText = "Admin@mail.com";
+            emailbox.Size = new Size(482, 50);
+            emailbox.TabIndex = 44;
             // 
-            // label4
+            // Emailcb
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Arial", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(36, 400);
-            label4.Name = "label4";
-            label4.Size = new Size(118, 42);
-            label4.TabIndex = 45;
-            label4.Text = "Email ";
+            Emailcb.AutoSize = true;
+            Emailcb.BackColor = Color.Transparent;
+            Emailcb.Font = new Font("Arial", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Emailcb.Location = new Point(36, 400);
+            Emailcb.Name = "Emailcb";
+            Emailcb.Size = new Size(118, 42);
+            Emailcb.TabIndex = 45;
+            Emailcb.Text = "Email ";
             // 
             // label5
             // 
@@ -139,37 +139,38 @@
             label5.TabIndex = 47;
             label5.Text = "Password";
             // 
-            // textBox2
+            // Passwordbox
             // 
-            textBox2.BackColor = Color.Silver;
-            textBox2.Font = new Font("Arial", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(36, 591);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Password";
-            textBox2.Size = new Size(482, 50);
-            textBox2.TabIndex = 46;
+            Passwordbox.BackColor = Color.Silver;
+            Passwordbox.Font = new Font("Arial", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Passwordbox.Location = new Point(36, 591);
+            Passwordbox.Name = "Passwordbox";
+            Passwordbox.PlaceholderText = "123";
+            Passwordbox.Size = new Size(482, 50);
+            Passwordbox.TabIndex = 46;
             // 
-            // button1
+            // loginbtn
             // 
-            button1.BackColor = Color.Blue;
-            button1.Font = new Font("Arial", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(36, 696);
-            button1.Name = "button1";
-            button1.Size = new Size(482, 52);
-            button1.TabIndex = 48;
-            button1.Text = "L O G I N";
-            button1.UseVisualStyleBackColor = false;
+            loginbtn.BackColor = Color.Blue;
+            loginbtn.Font = new Font("Arial", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            loginbtn.Location = new Point(36, 696);
+            loginbtn.Name = "loginbtn";
+            loginbtn.Size = new Size(482, 52);
+            loginbtn.TabIndex = 48;
+            loginbtn.Text = "L O G I N";
+            loginbtn.UseVisualStyleBackColor = false;
+            loginbtn.Click += loginbtn_Click;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1704, 916);
-            Controls.Add(button1);
+            Controls.Add(loginbtn);
             Controls.Add(label5);
-            Controls.Add(textBox2);
-            Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(Passwordbox);
+            Controls.Add(Emailcb);
+            Controls.Add(emailbox);
             Controls.Add(pictureBox1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -194,10 +195,10 @@
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
-        private TextBox textBox1;
-        private Label label4;
+        private TextBox emailbox;
+        private Label Emailcb;
         private Label label5;
-        private TextBox textBox2;
-        private Button button1;
+        private TextBox Passwordbox;
+        private Button loginbtn;
     }
 }
