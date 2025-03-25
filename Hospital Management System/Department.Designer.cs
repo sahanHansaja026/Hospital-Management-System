@@ -32,9 +32,8 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Department));
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            departmentList = new Guna.UI2.WinForms.Guna2DataGridView();
             label10 = new Label();
-            Departmentcb = new ComboBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -42,65 +41,70 @@
             panel2 = new Panel();
             button2 = new Button();
             submitbtn = new Button();
-            button1 = new Button();
+            updatebtn = new Button();
             panel1 = new Panel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             Back = new Label();
-            textBox1 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            DNameCb = new TextBox();
+            Dheadcb = new TextBox();
+            removebtn = new Button();
+            ((System.ComponentModel.ISupportInitialize)departmentList).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // guna2DataGridView1
+            // departmentList
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle1.Font = new Font("Arial", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            departmentList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeight = 4;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            departmentList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            departmentList.ColumnHeadersHeight = 4;
+            departmentList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.Font = new Font("Arial", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            guna2DataGridView1.GridColor = Color.Blue;
-            guna2DataGridView1.Location = new Point(803, 175);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.Size = new Size(996, 725);
-            guna2DataGridView1.TabIndex = 140;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.Blue;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 29;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            departmentList.DefaultCellStyle = dataGridViewCellStyle3;
+            departmentList.GridColor = Color.Blue;
+            departmentList.Location = new Point(803, 175);
+            departmentList.Name = "departmentList";
+            departmentList.RowHeadersVisible = false;
+            departmentList.RowHeadersWidth = 51;
+            departmentList.Size = new Size(996, 725);
+            departmentList.TabIndex = 140;
+            departmentList.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            departmentList.ThemeStyle.AlternatingRowsStyle.Font = null;
+            departmentList.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            departmentList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            departmentList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            departmentList.ThemeStyle.BackColor = Color.White;
+            departmentList.ThemeStyle.GridColor = Color.Blue;
+            departmentList.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            departmentList.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            departmentList.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            departmentList.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            departmentList.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            departmentList.ThemeStyle.HeaderStyle.Height = 4;
+            departmentList.ThemeStyle.ReadOnly = false;
+            departmentList.ThemeStyle.RowsStyle.BackColor = Color.White;
+            departmentList.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            departmentList.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            departmentList.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            departmentList.ThemeStyle.RowsStyle.Height = 29;
+            departmentList.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            departmentList.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            departmentList.CellContentClick += departmentList_CellContentClick;
             // 
             // label10
             // 
@@ -113,16 +117,6 @@
             label10.TabIndex = 139;
             label10.Text = "Head Of The Department :";
             // 
-            // Departmentcb
-            // 
-            Departmentcb.BackColor = Color.Silver;
-            Departmentcb.Font = new Font("Arial Narrow", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Departmentcb.FormattingEnabled = true;
-            Departmentcb.Location = new Point(19, 371);
-            Departmentcb.Name = "Departmentcb";
-            Departmentcb.Size = new Size(721, 48);
-            Departmentcb.TabIndex = 138;
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -130,9 +124,9 @@
             label5.ForeColor = Color.Black;
             label5.Location = new Point(9, 175);
             label5.Name = "label5";
-            label5.Size = new Size(278, 44);
+            label5.Size = new Size(361, 44);
             label5.TabIndex = 137;
-            label5.Text = "Patient Name :";
+            label5.Text = "Department Name :";
             // 
             // label4
             // 
@@ -194,24 +188,26 @@
             submitbtn.BackColor = Color.Blue;
             submitbtn.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             submitbtn.ForeColor = Color.White;
-            submitbtn.Location = new Point(27, 559);
+            submitbtn.Location = new Point(19, 547);
             submitbtn.Name = "submitbtn";
             submitbtn.Size = new Size(241, 63);
             submitbtn.TabIndex = 122;
             submitbtn.Text = "S U B M I T";
             submitbtn.UseVisualStyleBackColor = false;
+            submitbtn.Click += submitbtn_Click;
             // 
-            // button1
+            // updatebtn
             // 
-            button1.BackColor = Color.White;
-            button1.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Blue;
-            button1.Location = new Point(478, 547);
-            button1.Name = "button1";
-            button1.Size = new Size(241, 63);
-            button1.TabIndex = 123;
-            button1.Text = "U P D A T E";
-            button1.UseVisualStyleBackColor = false;
+            updatebtn.BackColor = Color.White;
+            updatebtn.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            updatebtn.ForeColor = Color.Blue;
+            updatebtn.Location = new Point(478, 547);
+            updatebtn.Name = "updatebtn";
+            updatebtn.Size = new Size(241, 63);
+            updatebtn.TabIndex = 123;
+            updatebtn.Text = "U P D A T E";
+            updatebtn.UseVisualStyleBackColor = false;
+            updatebtn.Click += updatebtn_Click;
             // 
             // panel1
             // 
@@ -232,28 +228,53 @@
             Back.TabIndex = 134;
             Back.Text = ">";
             // 
-            // textBox1
+            // DNameCb
             // 
-            textBox1.BackColor = Color.Silver;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Arial Narrow", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(19, 222);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Patient Name";
-            textBox1.Size = new Size(721, 50);
-            textBox1.TabIndex = 146;
+            DNameCb.BackColor = Color.Silver;
+            DNameCb.BorderStyle = BorderStyle.FixedSingle;
+            DNameCb.Font = new Font("Arial Narrow", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DNameCb.Location = new Point(19, 222);
+            DNameCb.Name = "DNameCb";
+            DNameCb.PlaceholderText = "Department Name";
+            DNameCb.Size = new Size(721, 50);
+            DNameCb.TabIndex = 146;
+            // 
+            // Dheadcb
+            // 
+            Dheadcb.BackColor = Color.Silver;
+            Dheadcb.BorderStyle = BorderStyle.FixedSingle;
+            Dheadcb.Font = new Font("Arial Narrow", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Dheadcb.Location = new Point(19, 387);
+            Dheadcb.Name = "Dheadcb";
+            Dheadcb.PlaceholderText = "Department head Name";
+            Dheadcb.Size = new Size(721, 50);
+            Dheadcb.TabIndex = 147;
+            // 
+            // removebtn
+            // 
+            removebtn.BackColor = Color.FromArgb(192, 0, 0);
+            removebtn.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            removebtn.ForeColor = Color.White;
+            removebtn.Location = new Point(247, 649);
+            removebtn.Name = "removebtn";
+            removebtn.Size = new Size(241, 63);
+            removebtn.TabIndex = 149;
+            removebtn.Text = "R E M O V E";
+            removebtn.UseVisualStyleBackColor = false;
+            removebtn.Click += removebtn_Click;
             // 
             // Department
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1796, 1055);
-            Controls.Add(textBox1);
+            Controls.Add(removebtn);
+            Controls.Add(Dheadcb);
+            Controls.Add(DNameCb);
             Controls.Add(submitbtn);
-            Controls.Add(button1);
-            Controls.Add(guna2DataGridView1);
+            Controls.Add(updatebtn);
+            Controls.Add(departmentList);
             Controls.Add(label10);
-            Controls.Add(Departmentcb);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -266,16 +287,15 @@
             Text = "MediLink";
             TopMost = true;
             WindowState = FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)departmentList).EndInit();
             panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView departmentList;
         private Label label10;
-        private ComboBox Departmentcb;
         private Label label5;
         private Label label4;
         private Label label3;
@@ -283,10 +303,12 @@
         private Panel panel2;
         private Button button2;
         private Button submitbtn;
-        private Button button1;
+        private Button updatebtn;
         private Panel panel1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Label Back;
-        private TextBox textBox1;
+        private TextBox DNameCb;
+        private TextBox Dheadcb;
+        private Button removebtn;
     }
 }

@@ -25,7 +25,7 @@ namespace Hospital_Management_System
             {
                 MessageBox.Show("Missing Data !!");
             }
-            else if (emailbox.Text == "Admin@mail.com" && Passwordbox.Text == "123")
+            else if (emailbox.Text == "Admin" && Passwordbox.Text == "123")
             {
                 control_panel Obj = new control_panel();
                 Obj.Show();
