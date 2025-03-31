@@ -33,7 +33,7 @@ namespace Hospital_Management_System
 
         private void doctors_Click(object sender, EventArgs e)
         {
-            Doctors obj = new Doctors();
+            DView obj = new DView();
             obj.Show();
             this.Hide();
         }
@@ -47,7 +47,7 @@ namespace Hospital_Management_System
 
         private void Doctorslbl_Click(object sender, EventArgs e)
         {
-            Doctors obj = new Doctors();
+            DView obj = new DView();
             obj.Show();
             this.Hide();
         }
@@ -62,6 +62,20 @@ namespace Hospital_Management_System
         private void Departmentlbl_Click(object sender, EventArgs e)
         {
             Department obj = new Department();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void report_Click(object sender, EventArgs e)
+        {
+            Report obj = new Report();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void reportslbl_Click(object sender, EventArgs e)
+        {
+            Report obj = new Report();
             obj.Show();
             this.Hide();
         }

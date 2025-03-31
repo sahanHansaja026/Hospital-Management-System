@@ -55,6 +55,8 @@
             label1 = new Label();
             Emailcb = new TextBox();
             DOBcb = new DateTimePicker();
+            label2 = new Label();
+            label13 = new Label();
             SuspendLayout();
             // 
             // label12
@@ -225,12 +227,13 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Red;
+            label3.ForeColor = Color.Blue;
             label3.Location = new Point(219, 25);
             label3.Name = "label3";
             label3.Size = new Size(100, 27);
             label3.TabIndex = 65;
             label3.Text = "Doctors";
+            label3.Click += label3_Click;
             // 
             // Back
             // 
@@ -320,10 +323,32 @@
             // 
             // DOBcb
             // 
+            DOBcb.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DOBcb.Location = new Point(26, 382);
             DOBcb.Name = "DOBcb";
-            DOBcb.Size = new Size(271, 27);
+            DOBcb.Size = new Size(534, 45);
             DOBcb.TabIndex = 87;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Red;
+            label2.Location = new Point(356, 25);
+            label2.Name = "label2";
+            label2.Size = new Size(138, 27);
+            label2.TabIndex = 88;
+            label2.Text = "Add Doctor";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Location = new Point(325, 25);
+            label13.Name = "label13";
+            label13.Size = new Size(25, 27);
+            label13.TabIndex = 89;
+            label13.Text = ">";
             // 
             // Doctors
             // 
@@ -331,6 +356,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             ClientSize = new Size(1704, 1055);
+            Controls.Add(label13);
+            Controls.Add(label2);
             Controls.Add(DOBcb);
             Controls.Add(label1);
             Controls.Add(Emailcb);
@@ -393,5 +420,7 @@
         private Label label1;
         private TextBox Emailcb;
         private DateTimePicker DOBcb;
+        private Label label2;
+        private Label label13;
     }
 }

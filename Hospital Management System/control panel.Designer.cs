@@ -146,6 +146,7 @@
             reportslbl.Size = new Size(133, 39);
             reportslbl.TabIndex = 12;
             reportslbl.Text = "Reports";
+            reportslbl.Click += reportslbl_Click;
             // 
             // report
             // 
@@ -158,6 +159,7 @@
             report.Size = new Size(347, 191);
             report.TabIndex = 11;
             report.UseVisualStyleBackColor = true;
+            report.Click += report_Click;
             // 
             // stafflbl
             // 

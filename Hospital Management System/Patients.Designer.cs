@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Patients));
             panel2 = new Panel();
             panel1 = new Panel();
@@ -43,7 +41,6 @@
             label6 = new Label();
             Lastnamecb = new TextBox();
             label7 = new Label();
-            DOBcb = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label8 = new Label();
             Contactcb = new TextBox();
             Gendercb = new ComboBox();
@@ -55,6 +52,7 @@
             label12 = new Label();
             Insurancecb = new TextBox();
             submitbtn = new Button();
+            DOBCb = new DateTimePicker();
             SuspendLayout();
             // 
             // panel2
@@ -174,22 +172,6 @@
             label7.Size = new Size(270, 44);
             label7.TabIndex = 49;
             label7.Text = "Date Of Birth :";
-            // 
-            // DOBcb
-            // 
-            DOBcb.Checked = true;
-            DOBcb.CustomizableEdges = customizableEdges1;
-            DOBcb.FillColor = Color.Silver;
-            DOBcb.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            DOBcb.Format = DateTimePickerFormat.Long;
-            DOBcb.Location = new Point(34, 349);
-            DOBcb.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            DOBcb.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            DOBcb.Name = "DOBcb";
-            DOBcb.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            DOBcb.Size = new Size(362, 50);
-            DOBcb.TabIndex = 50;
-            DOBcb.Value = new DateTime(2025, 3, 20, 21, 50, 42, 577);
             // 
             // label8
             // 
@@ -313,6 +295,15 @@
             submitbtn.TabIndex = 62;
             submitbtn.Text = "S U B M I T";
             submitbtn.UseVisualStyleBackColor = false;
+            submitbtn.Click += submitbtn_Click;
+            // 
+            // DOBCb
+            // 
+            DOBCb.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DOBCb.Location = new Point(34, 372);
+            DOBCb.Name = "DOBCb";
+            DOBCb.Size = new Size(547, 45);
+            DOBCb.TabIndex = 63;
             // 
             // Patients
             // 
@@ -320,6 +311,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             ClientSize = new Size(1704, 995);
+            Controls.Add(DOBCb);
             Controls.Add(submitbtn);
             Controls.Add(label12);
             Controls.Add(Insurancecb);
@@ -331,7 +323,6 @@
             Controls.Add(Gendercb);
             Controls.Add(label8);
             Controls.Add(Contactcb);
-            Controls.Add(DOBcb);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(Lastnamecb);
@@ -366,7 +357,6 @@
         private Label label6;
         private TextBox Lastnamecb;
         private Label label7;
-        private Guna.UI2.WinForms.Guna2DateTimePicker DOBcb;
         private Label label8;
         private TextBox Contactcb;
         private ComboBox Gendercb;
@@ -378,5 +368,6 @@
         private Label label12;
         private TextBox Insurancecb;
         private Button submitbtn;
+        private DateTimePicker DOBCb;
     }
 }

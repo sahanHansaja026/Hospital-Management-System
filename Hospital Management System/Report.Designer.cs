@@ -28,17 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
             submitbtn = new Button();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             button2 = new Button();
-            button1 = new Button();
             label10 = new Label();
-            Departmentcb = new ComboBox();
+            DoctorNamecb = new ComboBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -46,12 +41,13 @@
             ContralPanel = new Label();
             panel2 = new Panel();
             panel1 = new Panel();
-            comboBox1 = new ComboBox();
+            PatientNamecb = new ComboBox();
             label1 = new Label();
-            Firstnamecb = new TextBox();
+            Diagnosiscb = new TextBox();
             label2 = new Label();
-            textBox1 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            Prescriptioncb = new TextBox();
+            datecb = new DateTimePicker();
+            label7 = new Label();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,63 +56,13 @@
             submitbtn.BackColor = Color.Blue;
             submitbtn.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             submitbtn.ForeColor = Color.White;
-            submitbtn.Location = new Point(23, 905);
+            submitbtn.Location = new Point(710, 913);
             submitbtn.Name = "submitbtn";
-            submitbtn.Size = new Size(241, 63);
+            submitbtn.Size = new Size(517, 63);
             submitbtn.TabIndex = 122;
             submitbtn.Text = "S U B M I T";
             submitbtn.UseVisualStyleBackColor = false;
-            // 
-            // guna2DataGridView1
-            // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeight = 4;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            guna2DataGridView1.GridColor = Color.Blue;
-            guna2DataGridView1.Location = new Point(806, 179);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.Size = new Size(996, 664);
-            guna2DataGridView1.TabIndex = 125;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.Blue;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 29;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            submitbtn.Click += submitbtn_Click;
             // 
             // button2
             // 
@@ -130,18 +76,6 @@
             button2.Text = "D E L E T E";
             button2.UseVisualStyleBackColor = false;
             // 
-            // button1
-            // 
-            button1.BackColor = Color.White;
-            button1.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Blue;
-            button1.Location = new Point(503, 903);
-            button1.Name = "button1";
-            button1.Size = new Size(241, 63);
-            button1.TabIndex = 123;
-            button1.Text = "U P D A T E";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // label10
             // 
             label10.AutoSize = true;
@@ -153,15 +87,15 @@
             label10.TabIndex = 121;
             label10.Text = "Doctor Name :";
             // 
-            // Departmentcb
+            // DoctorNamecb
             // 
-            Departmentcb.BackColor = Color.Silver;
-            Departmentcb.Font = new Font("Arial Narrow", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Departmentcb.FormattingEnabled = true;
-            Departmentcb.Location = new Point(23, 297);
-            Departmentcb.Name = "Departmentcb";
-            Departmentcb.Size = new Size(721, 48);
-            Departmentcb.TabIndex = 120;
+            DoctorNamecb.BackColor = Color.Silver;
+            DoctorNamecb.Font = new Font("Arial Narrow", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DoctorNamecb.FormattingEnabled = true;
+            DoctorNamecb.Location = new Point(23, 297);
+            DoctorNamecb.Name = "DoctorNamecb";
+            DoctorNamecb.Size = new Size(721, 48);
+            DoctorNamecb.TabIndex = 120;
             // 
             // label5
             // 
@@ -194,6 +128,7 @@
             label3.Size = new Size(87, 27);
             label3.TabIndex = 116;
             label3.Text = "Report";
+            label3.Click += label3_Click;
             // 
             // Back
             // 
@@ -215,15 +150,16 @@
             ContralPanel.Size = new Size(178, 27);
             ContralPanel.TabIndex = 114;
             ContralPanel.Text = "Controal Panel";
+            ContralPanel.Click += ContralPanel_Click;
             // 
             // panel2
             // 
             panel2.BackColor = Color.Red;
             panel2.Controls.Add(button2);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 991);
+            panel2.Location = new Point(0, 1012);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1802, 39);
+            panel2.Size = new Size(1751, 39);
             panel2.TabIndex = 113;
             // 
             // panel1
@@ -232,80 +168,99 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1802, 13);
+            panel1.Size = new Size(1751, 13);
             panel1.TabIndex = 112;
             // 
-            // comboBox1
+            // PatientNamecb
             // 
-            comboBox1.BackColor = Color.Silver;
-            comboBox1.Font = new Font("Arial Narrow", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(23, 179);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(721, 48);
-            comboBox1.TabIndex = 126;
+            PatientNamecb.BackColor = Color.Silver;
+            PatientNamecb.Font = new Font("Arial Narrow", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PatientNamecb.FormattingEnabled = true;
+            PatientNamecb.Location = new Point(23, 179);
+            PatientNamecb.Name = "PatientNamecb";
+            PatientNamecb.Size = new Size(721, 48);
+            PatientNamecb.TabIndex = 126;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(13, 377);
+            label1.Location = new Point(13, 481);
             label1.Name = "label1";
             label1.Size = new Size(221, 44);
             label1.TabIndex = 130;
             label1.Text = "Diagnosis :";
             // 
-            // Firstnamecb
+            // Diagnosiscb
             // 
-            Firstnamecb.BackColor = Color.Silver;
-            Firstnamecb.BorderStyle = BorderStyle.FixedSingle;
-            Firstnamecb.Font = new Font("Arial Narrow", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Firstnamecb.Location = new Point(23, 424);
-            Firstnamecb.Multiline = true;
-            Firstnamecb.Name = "Firstnamecb";
-            Firstnamecb.PlaceholderText = "Diagnosis :";
-            Firstnamecb.Size = new Size(721, 185);
-            Firstnamecb.TabIndex = 129;
+            Diagnosiscb.BackColor = Color.Silver;
+            Diagnosiscb.BorderStyle = BorderStyle.FixedSingle;
+            Diagnosiscb.Font = new Font("Arial Narrow", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Diagnosiscb.Location = new Point(23, 528);
+            Diagnosiscb.Multiline = true;
+            Diagnosiscb.Name = "Diagnosiscb";
+            Diagnosiscb.PlaceholderText = "Diagnosis :";
+            Diagnosiscb.Size = new Size(721, 339);
+            Diagnosiscb.TabIndex = 129;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(13, 627);
+            label2.Location = new Point(899, 170);
             label2.Name = "label2";
             label2.Size = new Size(259, 44);
-            label2.TabIndex = 132;
+            label2.TabIndex = 134;
             label2.Text = "Prescription :";
             // 
-            // textBox1
+            // Prescriptioncb
             // 
-            textBox1.BackColor = Color.Silver;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Arial Narrow", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(23, 674);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Prescription";
-            textBox1.Size = new Size(721, 185);
-            textBox1.TabIndex = 131;
+            Prescriptioncb.BackColor = Color.Silver;
+            Prescriptioncb.BorderStyle = BorderStyle.FixedSingle;
+            Prescriptioncb.Font = new Font("Arial Narrow", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Prescriptioncb.Location = new Point(909, 217);
+            Prescriptioncb.Multiline = true;
+            Prescriptioncb.Name = "Prescriptioncb";
+            Prescriptioncb.PlaceholderText = "Prescription";
+            Prescriptioncb.Size = new Size(792, 375);
+            Prescriptioncb.TabIndex = 133;
+            // 
+            // datecb
+            // 
+            datecb.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            datecb.Location = new Point(23, 423);
+            datecb.Name = "datecb";
+            datecb.Size = new Size(547, 45);
+            datecb.TabIndex = 136;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(17, 362);
+            label7.Name = "label7";
+            label7.Size = new Size(270, 44);
+            label7.TabIndex = 135;
+            label7.Text = "Date Of Birth :";
             // 
             // Report
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoScroll = true;
             ClientSize = new Size(1751, 1051);
+            Controls.Add(datecb);
+            Controls.Add(label7);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(Prescriptioncb);
             Controls.Add(submitbtn);
             Controls.Add(label1);
-            Controls.Add(button1);
-            Controls.Add(Firstnamecb);
-            Controls.Add(comboBox1);
-            Controls.Add(guna2DataGridView1);
+            Controls.Add(Diagnosiscb);
+            Controls.Add(PatientNamecb);
             Controls.Add(label10);
-            Controls.Add(Departmentcb);
+            Controls.Add(DoctorNamecb);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -320,7 +275,6 @@
             TopMost = true;
             WindowState = FormWindowState.Maximized;
             Load += Report_Load;
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -330,11 +284,9 @@
 
         private Button submitbtn;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Button button2;
-        private Button button1;
         private Label label10;
-        private ComboBox Departmentcb;
+        private ComboBox DoctorNamecb;
         private Label label5;
         private Label label4;
         private Label label3;
@@ -342,10 +294,12 @@
         private Label ContralPanel;
         private Panel panel2;
         private Panel panel1;
-        private ComboBox comboBox1;
+        private ComboBox PatientNamecb;
         private Label label1;
-        private TextBox Firstnamecb;
+        private TextBox Diagnosiscb;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox Prescriptioncb;
+        private DateTimePicker datecb;
+        private Label label7;
     }
 }
