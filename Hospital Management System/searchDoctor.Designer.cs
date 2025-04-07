@@ -112,6 +112,7 @@
             label3.Size = new Size(100, 27);
             label3.TabIndex = 94;
             label3.Text = "Doctors";
+            label3.Click += label3_Click;
             // 
             // deltebtn
             // 
@@ -133,6 +134,7 @@
             ContralPanel.Size = new Size(178, 27);
             ContralPanel.TabIndex = 92;
             ContralPanel.Text = "Controal Panel";
+            ContralPanel.Click += ContralPanel_Click;
             // 
             // panel2
             // 
@@ -173,6 +175,7 @@
             button1.TabIndex = 118;
             button1.Text = "D E L E T E";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 

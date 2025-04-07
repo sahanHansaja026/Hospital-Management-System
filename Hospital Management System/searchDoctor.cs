@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Hospital_Management_System
 {
@@ -80,6 +82,45 @@ namespace Hospital_Management_System
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ContralPanel_Click(object sender, EventArgs e)
+        {
+            control_panel obj = new control_panel();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            DView obj = new DView();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string Doctor_ID = DoctorsearchCb.SelectedValue.ToString();
+                string Query = $"Delete from DoctorTbl WHERE Doctor_ID = '{Doctor_ID}'";
+                DataTable dt = Con.GetData(Query);
+                MessageBox.Show("Doctor delete sucess");
+                specialcb.Text = "";
+                recodecb.Text = "";
+                Gendercb.Text = "";
+                Departmentcb.Text = "";
+                DOBcb.Text = "";
+                Emailcb.Text = "";
+                Contactcb.Text = "";
+                Dnamecb.Text = $"Dr."; // Show in label
+
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
         }
     }
 }

@@ -10,30 +10,23 @@ using System.Windows.Forms;
 
 namespace Hospital_Management_System
 {
-    public partial class DView : Form
+    public partial class Pview : Form
     {
-        public DView()
+        public Pview()
         {
             InitializeComponent();
         }
 
         private void Adddoctor_Click(object sender, EventArgs e)
         {
-            Doctors obj = new Doctors();
-            obj.Show();
-            this.Hide();
-        }
-
-        private void Patientslbl_Click(object sender, EventArgs e)
-        {
-            Doctors obj = new Doctors();
+            Patients obj = new Patients();
             obj.Show();
             this.Hide();
         }
 
         private void searchDoctor_Click(object sender, EventArgs e)
         {
-            searchDoctor obj = new searchDoctor();
+            searchpatients obj = new searchpatients();
             obj.Show();
             this.Hide();
         }

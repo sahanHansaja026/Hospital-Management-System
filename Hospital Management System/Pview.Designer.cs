@@ -1,6 +1,6 @@
 ﻿namespace Hospital_Management_System
 {
-    partial class DView
+    partial class Pview
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pview));
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
             label3 = new Label();
             Back = new Label();
@@ -50,9 +50,9 @@
             label3.ForeColor = Color.Red;
             label3.Location = new Point(215, 25);
             label3.Name = "label3";
-            label3.Size = new Size(100, 27);
-            label3.TabIndex = 113;
-            label3.Text = "Doctors";
+            label3.Size = new Size(104, 27);
+            label3.TabIndex = 122;
+            label3.Text = "Patients";
             // 
             // Back
             // 
@@ -61,7 +61,7 @@
             Back.Location = new Point(184, 25);
             Back.Name = "Back";
             Back.Size = new Size(25, 27);
-            Back.TabIndex = 112;
+            Back.TabIndex = 121;
             Back.Text = ">";
             // 
             // ContralPanel
@@ -72,7 +72,7 @@
             ContralPanel.Location = new Point(0, 25);
             ContralPanel.Name = "ContralPanel";
             ContralPanel.Size = new Size(178, 27);
-            ContralPanel.TabIndex = 111;
+            ContralPanel.TabIndex = 120;
             ContralPanel.Text = "Controal Panel";
             // 
             // panel2
@@ -82,7 +82,7 @@
             panel2.Location = new Point(0, 1016);
             panel2.Name = "panel2";
             panel2.Size = new Size(1704, 39);
-            panel2.TabIndex = 110;
+            panel2.TabIndex = 119;
             // 
             // panel1
             // 
@@ -91,7 +91,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1704, 13);
-            panel1.TabIndex = 109;
+            panel1.TabIndex = 118;
             // 
             // searchDoctor
             // 
@@ -102,7 +102,7 @@
             searchDoctor.Location = new Point(990, 340);
             searchDoctor.Name = "searchDoctor";
             searchDoctor.Size = new Size(347, 191);
-            searchDoctor.TabIndex = 117;
+            searchDoctor.TabIndex = 126;
             searchDoctor.UseVisualStyleBackColor = true;
             searchDoctor.Click += searchDoctor_Click;
             // 
@@ -113,9 +113,9 @@
             Doctorslbl.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Doctorslbl.Location = new Point(1046, 534);
             Doctorslbl.Name = "Doctorslbl";
-            Doctorslbl.Size = new Size(230, 39);
-            Doctorslbl.TabIndex = 116;
-            Doctorslbl.Text = "Search Doctor";
+            Doctorslbl.Size = new Size(252, 39);
+            Doctorslbl.TabIndex = 125;
+            Doctorslbl.Text = "Search Patients";
             // 
             // Patientslbl
             // 
@@ -124,10 +124,9 @@
             Patientslbl.Font = new Font("Arial", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Patientslbl.Location = new Point(617, 534);
             Patientslbl.Name = "Patientslbl";
-            Patientslbl.Size = new Size(183, 39);
-            Patientslbl.TabIndex = 115;
-            Patientslbl.Text = "Add Doctor";
-            Patientslbl.Click += Patientslbl_Click;
+            Patientslbl.Size = new Size(205, 39);
+            Patientslbl.TabIndex = 124;
+            Patientslbl.Text = "Add Patients";
             // 
             // Adddoctor
             // 
@@ -140,26 +139,26 @@
             Adddoctor.Location = new Point(526, 340);
             Adddoctor.Name = "Adddoctor";
             Adddoctor.Size = new Size(347, 191);
-            Adddoctor.TabIndex = 114;
+            Adddoctor.TabIndex = 123;
             Adddoctor.UseVisualStyleBackColor = true;
             Adddoctor.Click += Adddoctor_Click;
             // 
-            // DView
+            // Pview
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1704, 1055);
-            Controls.Add(searchDoctor);
-            Controls.Add(Doctorslbl);
-            Controls.Add(Patientslbl);
-            Controls.Add(Adddoctor);
             Controls.Add(label3);
             Controls.Add(Back);
             Controls.Add(ContralPanel);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(searchDoctor);
+            Controls.Add(Doctorslbl);
+            Controls.Add(Patientslbl);
+            Controls.Add(Adddoctor);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "DView";
+            Name = "Pview";
             Text = "MediLink";
             TopMost = true;
             WindowState = FormWindowState.Maximized;
