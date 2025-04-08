@@ -171,6 +171,7 @@
             stafflbl.Size = new Size(86, 39);
             stafflbl.TabIndex = 14;
             stafflbl.Text = "Staff";
+            stafflbl.Click += stafflbl_Click;
             // 
             // staff
             // 
@@ -185,6 +186,7 @@
             staff.Size = new Size(347, 191);
             staff.TabIndex = 13;
             staff.UseVisualStyleBackColor = true;
+            staff.Click += staff_Click;
             // 
             // accountlbl
             // 
@@ -243,6 +245,7 @@
             appointments.Size = new Size(347, 191);
             appointments.TabIndex = 16;
             appointments.UseVisualStyleBackColor = true;
+            appointments.Click += appointments_Click;
             // 
             // appointmentslbl
             // 
@@ -254,6 +257,7 @@
             appointmentslbl.Size = new Size(219, 39);
             appointmentslbl.TabIndex = 15;
             appointmentslbl.Text = "Appointments";
+            appointmentslbl.Click += appointmentslbl_Click;
             // 
             // panel2
             // 

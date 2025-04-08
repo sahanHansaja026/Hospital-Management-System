@@ -79,5 +79,33 @@ namespace Hospital_Management_System
             obj.Show();
             this.Hide();
         }
+
+        private void staff_Click(object sender, EventArgs e)
+        {
+            Sview obj = new Sview();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void appointments_Click(object sender, EventArgs e)
+        {
+            appoiment obj = new appoiment();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void appointmentslbl_Click(object sender, EventArgs e)
+        {
+            appoiment obj = new appoiment();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void stafflbl_Click(object sender, EventArgs e)
+        {
+            Sview obj = new Sview();
+            obj.Show();
+            this.Hide();
+        }
     }
 }
