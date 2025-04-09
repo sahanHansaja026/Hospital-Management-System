@@ -45,6 +45,7 @@ namespace Hospital_Management_System
         }
 
 
+      
         public int ExecuteScalar(string query, Dictionary<string, object> parameters)
         {
             int result = 0;

@@ -95,9 +95,9 @@
             label2.ForeColor = Color.Red;
             label2.Location = new Point(408, 25);
             label2.Name = "label2";
-            label2.Size = new Size(138, 27);
+            label2.Size = new Size(210, 27);
             label2.TabIndex = 115;
-            label2.Text = "Add Doctor";
+            label2.Text = "New Appointment";
             // 
             // label11
             // 

@@ -83,14 +83,14 @@ namespace Hospital_Management_System
                     string First_Name = Firstnamecb.Text;
                     string Last_Name = Lastnamecb.Text;
                     string Date = datecb.Value.Date.ToString();
-                    string Gender = Gendercb.SelectedItem?.ToString();
-                    int Member_Of_Counter = Convert.ToInt32(Cmembershowcb.SelectedValue.ToString());
                     int Doctor_ID = Convert.ToInt32(Doctorshowcb.SelectedValue.ToString());
+                    string Gender = Gendercb.SelectedItem.ToString();
                     string Contact_Number = Contactcb.Text;
                     string Status = statuscb.Text;
+                    int Member_Of_Counter = Convert.ToInt32(Cmembershowcb.SelectedValue.ToString());                   
 
-                    string Query = "insert into AppoimentTbl values('{0}','{1}','{2}','{3}',{4},'{5}','{6}',{7})";
-                    Query = string.Format(Query, First_Name, Last_Name, Date, Gender, Doctor_ID, Status, Contact_Number, Member_Of_Counter);
+                    string Query = "insert into AppoimentTbl values('{0}','{1}','{2}',{3},'{4}','{5}','{6}',{7})";
+                    Query = string.Format(Query, First_Name, Last_Name, Date, Doctor_ID, Gender, Contact_Number, Status, Member_Of_Counter);
                     Con.SetData(Query);
                     MessageBox.Show("Appoiment create sucessfully !!");
                     Firstnamecb.Text = "";
@@ -98,7 +98,9 @@ namespace Hospital_Management_System
                     datecb.Text = "";
                     statuscb.Text = "";
                     Contactcb.Text = "";
-                    Doctorshowcb.SelectedValue = "";
+                    Cmembershowcb.SelectedValue = -1;
+                    Gendercb.SelectedIndex = -1;
+                    Doctorshowcb.SelectedIndex = -1;
 
                 }
             }

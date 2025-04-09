@@ -118,9 +118,8 @@
             Insurance_idcb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Insurance_idcb.Location = new Point(1274, 499);
             Insurance_idcb.Name = "Insurance_idcb";
-            Insurance_idcb.Size = new Size(185, 35);
+            Insurance_idcb.Size = new Size(0, 35);
             Insurance_idcb.TabIndex = 153;
-            Insurance_idcb.Text = "Insurance Id ";
             // 
             // addresscb
             // 
@@ -129,9 +128,8 @@
             addresscb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addresscb.Location = new Point(1274, 439);
             addresscb.Name = "addresscb";
-            addresscb.Size = new Size(158, 35);
+            addresscb.Size = new Size(0, 35);
             addresscb.TabIndex = 152;
-            addresscb.Text = "Address -  ";
             // 
             // Bloodcb
             // 
@@ -140,9 +138,8 @@
             Bloodcb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Bloodcb.Location = new Point(430, 488);
             Bloodcb.Name = "Bloodcb";
-            Bloodcb.Size = new Size(117, 35);
+            Bloodcb.Size = new Size(0, 35);
             Bloodcb.TabIndex = 151;
-            Bloodcb.Text = "Blood - ";
             // 
             // DOBcb
             // 
@@ -151,9 +148,8 @@
             DOBcb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DOBcb.Location = new Point(430, 428);
             DOBcb.Name = "DOBcb";
-            DOBcb.Size = new Size(210, 35);
+            DOBcb.Size = new Size(0, 35);
             DOBcb.TabIndex = 150;
-            DOBcb.Text = "Date Of Birth : ";
             // 
             // Gendercb
             // 
@@ -162,9 +158,8 @@
             Gendercb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Gendercb.Location = new Point(430, 374);
             Gendercb.Name = "Gendercb";
-            Gendercb.Size = new Size(140, 35);
+            Gendercb.Size = new Size(0, 35);
             Gendercb.TabIndex = 149;
-            Gendercb.Text = "Gender - ";
             // 
             // button1
             // 
@@ -313,9 +308,8 @@
             Contactcb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Contactcb.Location = new Point(1274, 374);
             Contactcb.Name = "Contactcb";
-            Contactcb.Size = new Size(258, 35);
+            Contactcb.Size = new Size(0, 35);
             Contactcb.TabIndex = 160;
-            Contactcb.Text = "Contact Number - ";
             // 
             // searchpatients
             // 

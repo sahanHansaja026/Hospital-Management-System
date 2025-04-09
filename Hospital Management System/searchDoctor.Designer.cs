@@ -169,7 +169,7 @@
             button1.BackColor = Color.Crimson;
             button1.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(1475, 952);
+            button1.Location = new Point(1441, 871);
             button1.Name = "button1";
             button1.Size = new Size(221, 48);
             button1.TabIndex = 118;
@@ -182,7 +182,7 @@
             button2.BackColor = Color.Blue;
             button2.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(1121, 952);
+            button2.Location = new Point(1087, 871);
             button2.Name = "button2";
             button2.Size = new Size(221, 48);
             button2.TabIndex = 119;

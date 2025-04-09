@@ -89,14 +89,14 @@ namespace Hospital_Management_System
 
         private void appointments_Click(object sender, EventArgs e)
         {
-            appoiment obj = new appoiment();
+            aview obj = new aview();
             obj.Show();
             this.Hide();
         }
 
         private void appointmentslbl_Click(object sender, EventArgs e)
         {
-            appoiment obj = new appoiment();
+            aview obj = new aview();
             obj.Show();
             this.Hide();
         }
