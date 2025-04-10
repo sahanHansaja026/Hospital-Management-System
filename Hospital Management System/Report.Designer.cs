@@ -48,6 +48,8 @@
             Prescriptioncb = new TextBox();
             datecb = new DateTimePicker();
             label7 = new Label();
+            label6 = new Label();
+            label8 = new Label();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -123,11 +125,11 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Red;
-            label3.Location = new Point(215, 25);
+            label3.Location = new Point(339, 25);
             label3.Name = "label3";
-            label3.Size = new Size(87, 27);
+            label3.Size = new Size(221, 27);
             label3.TabIndex = 116;
-            label3.Text = "Report";
+            label3.Text = "Create New Report";
             label3.Click += label3_Click;
             // 
             // Back
@@ -246,11 +248,34 @@
             label7.TabIndex = 135;
             label7.Text = "Date Of Birth :";
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Blue;
+            label6.Location = new Point(215, 25);
+            label6.Name = "label6";
+            label6.Size = new Size(87, 27);
+            label6.TabIndex = 137;
+            label6.Text = "Report";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Location = new Point(308, 25);
+            label8.Name = "label8";
+            label8.Size = new Size(25, 27);
+            label8.TabIndex = 138;
+            label8.Text = ">";
+            // 
             // Report
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoScroll = true;
             ClientSize = new Size(1751, 1051);
+            Controls.Add(label8);
+            Controls.Add(label6);
             Controls.Add(datecb);
             Controls.Add(label7);
             Controls.Add(label2);
@@ -301,5 +326,7 @@
         private TextBox Prescriptioncb;
         private DateTimePicker datecb;
         private Label label7;
+        private Label label6;
+        private Label label8;
     }
 }

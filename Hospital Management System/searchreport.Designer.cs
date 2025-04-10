@@ -1,6 +1,6 @@
 ﻿namespace Hospital_Management_System
 {
-    partial class searchappoiments
+    partial class searchreport
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(searchappoiments));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(searchreport));
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
@@ -36,15 +36,16 @@
             label4 = new Label();
             label1 = new Label();
             Contactcb = new Label();
-            agentcb = new Label();
+            datecb = new Label();
             DNamecb = new Label();
-            Datecb = new Label();
+            DOBcb = new Label();
             Gendercb = new Label();
             label9 = new Label();
-            statuscb = new Label();
-            FullNamecb = new Label();
+            diagnosiscb = new Label();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            Bloodcb = new Label();
             deletebtn = new Button();
-            Anumbercb = new Label();
+            Pnamecbcb = new Label();
             label2 = new Label();
             ReportSearchCb = new ComboBox();
             label3 = new Label();
@@ -52,10 +53,11 @@
             ContralPanel = new Label();
             panel2 = new Panel();
             panel1 = new Panel();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             editbtn = new Button();
             label13 = new Label();
             searchbtn = new Button();
+            label10 = new Label();
+            Prescriptioncb = new Label();
             SuspendLayout();
             // 
             // label5
@@ -66,7 +68,7 @@
             label5.Location = new Point(41, 534);
             label5.Name = "label5";
             label5.Size = new Size(215, 35);
-            label5.TabIndex = 159;
+            label5.TabIndex = 185;
             label5.Text = "Doctor Name - ";
             // 
             // label6
@@ -76,9 +78,9 @@
             label6.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.Location = new Point(41, 474);
             label6.Name = "label6";
-            label6.Size = new Size(103, 35);
-            label6.TabIndex = 158;
-            label6.Text = "Date - ";
+            label6.Size = new Size(212, 35);
+            label6.TabIndex = 184;
+            label6.Text = "Date Of Birth - ";
             // 
             // label7
             // 
@@ -88,7 +90,7 @@
             label7.Location = new Point(41, 420);
             label7.Name = "label7";
             label7.Size = new Size(140, 35);
-            label7.TabIndex = 157;
+            label7.TabIndex = 183;
             label7.Text = "Gender - ";
             // 
             // label8
@@ -98,30 +100,30 @@
             label8.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.Location = new Point(41, 360);
             label8.Name = "label8";
-            label8.Size = new Size(177, 35);
-            label8.TabIndex = 156;
-            label8.Text = "Full Name - ";
+            label8.Size = new Size(117, 35);
+            label8.TabIndex = 182;
+            label8.Text = "Blood - ";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.BackColor = SystemColors.Control;
             label4.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(962, 484);
+            label4.Location = new Point(977, 474);
             label4.Name = "label4";
-            label4.Size = new Size(170, 35);
-            label4.TabIndex = 155;
-            label4.Text = "CallAgent - ";
+            label4.Size = new Size(204, 35);
+            label4.TabIndex = 181;
+            label4.Text = "Date Of Issu - ";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = SystemColors.Control;
             label1.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(962, 544);
+            label1.Location = new Point(977, 534);
             label1.Name = "label1";
             label1.Size = new Size(258, 35);
-            label1.TabIndex = 154;
+            label1.TabIndex = 180;
             label1.Text = "Contact Number - ";
             // 
             // Contactcb
@@ -129,20 +131,20 @@
             Contactcb.AutoSize = true;
             Contactcb.BackColor = SystemColors.Control;
             Contactcb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Contactcb.Location = new Point(1226, 544);
+            Contactcb.Location = new Point(1241, 534);
             Contactcb.Name = "Contactcb";
             Contactcb.Size = new Size(0, 35);
-            Contactcb.TabIndex = 153;
+            Contactcb.TabIndex = 179;
             // 
-            // agentcb
+            // datecb
             // 
-            agentcb.AutoSize = true;
-            agentcb.BackColor = SystemColors.Control;
-            agentcb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            agentcb.Location = new Point(1226, 484);
-            agentcb.Name = "agentcb";
-            agentcb.Size = new Size(0, 35);
-            agentcb.TabIndex = 152;
+            datecb.AutoSize = true;
+            datecb.BackColor = SystemColors.Control;
+            datecb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            datecb.Location = new Point(1241, 474);
+            datecb.Name = "datecb";
+            datecb.Size = new Size(0, 35);
+            datecb.TabIndex = 178;
             // 
             // DNamecb
             // 
@@ -152,17 +154,17 @@
             DNamecb.Location = new Point(284, 534);
             DNamecb.Name = "DNamecb";
             DNamecb.Size = new Size(0, 35);
-            DNamecb.TabIndex = 151;
+            DNamecb.TabIndex = 177;
             // 
-            // Datecb
+            // DOBcb
             // 
-            Datecb.AutoSize = true;
-            Datecb.BackColor = SystemColors.Control;
-            Datecb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Datecb.Location = new Point(284, 474);
-            Datecb.Name = "Datecb";
-            Datecb.Size = new Size(0, 35);
-            Datecb.TabIndex = 150;
+            DOBcb.AutoSize = true;
+            DOBcb.BackColor = SystemColors.Control;
+            DOBcb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DOBcb.Location = new Point(284, 474);
+            DOBcb.Name = "DOBcb";
+            DOBcb.Size = new Size(0, 35);
+            DOBcb.TabIndex = 176;
             // 
             // Gendercb
             // 
@@ -172,7 +174,7 @@
             Gendercb.Location = new Point(284, 420);
             Gendercb.Name = "Gendercb";
             Gendercb.Size = new Size(0, 35);
-            Gendercb.TabIndex = 149;
+            Gendercb.TabIndex = 175;
             // 
             // label9
             // 
@@ -180,63 +182,63 @@
             label9.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.Location = new Point(41, 619);
             label9.Name = "label9";
-            label9.Size = new Size(140, 40);
-            label9.TabIndex = 148;
-            label9.Text = "Status -";
+            label9.Size = new Size(199, 40);
+            label9.TabIndex = 174;
+            label9.Text = "Diagnosis -";
             // 
-            // statuscb
+            // diagnosiscb
             // 
-            statuscb.AutoSize = true;
-            statuscb.BackColor = SystemColors.Control;
-            statuscb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            statuscb.Location = new Point(41, 659);
-            statuscb.Name = "statuscb";
-            statuscb.Size = new Size(0, 35);
-            statuscb.TabIndex = 147;
+            diagnosiscb.AutoSize = true;
+            diagnosiscb.BackColor = SystemColors.Control;
+            diagnosiscb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            diagnosiscb.Location = new Point(41, 659);
+            diagnosiscb.Name = "diagnosiscb";
+            diagnosiscb.Size = new Size(0, 35);
+            diagnosiscb.TabIndex = 173;
             // 
-            // FullNamecb
+            // Bloodcb
             // 
-            FullNamecb.AutoSize = true;
-            FullNamecb.BackColor = SystemColors.Control;
-            FullNamecb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FullNamecb.Location = new Point(284, 360);
-            FullNamecb.Name = "FullNamecb";
-            FullNamecb.Size = new Size(0, 35);
-            FullNamecb.TabIndex = 146;
+            Bloodcb.AutoSize = true;
+            Bloodcb.BackColor = SystemColors.Control;
+            Bloodcb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Bloodcb.Location = new Point(284, 360);
+            Bloodcb.Name = "Bloodcb";
+            Bloodcb.Size = new Size(0, 35);
+            Bloodcb.TabIndex = 172;
             // 
             // deletebtn
             // 
             deletebtn.BackColor = Color.Crimson;
             deletebtn.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             deletebtn.ForeColor = Color.White;
-            deletebtn.Location = new Point(1452, 843);
+            deletebtn.Location = new Point(1460, 918);
             deletebtn.Name = "deletebtn";
             deletebtn.Size = new Size(221, 48);
-            deletebtn.TabIndex = 144;
+            deletebtn.TabIndex = 170;
             deletebtn.Text = "D E L E T E";
             deletebtn.UseVisualStyleBackColor = false;
             deletebtn.Click += deletebtn_Click;
             // 
-            // Anumbercb
+            // Pnamecbcb
             // 
-            Anumbercb.AutoSize = true;
-            Anumbercb.Font = new Font("Arial", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Anumbercb.Location = new Point(41, 267);
-            Anumbercb.Name = "Anumbercb";
-            Anumbercb.Size = new Size(450, 53);
-            Anumbercb.TabIndex = 143;
-            Anumbercb.Text = "Appoinment Number";
+            Pnamecbcb.AutoSize = true;
+            Pnamecbcb.Font = new Font("Arial", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Pnamecbcb.Location = new Point(41, 267);
+            Pnamecbcb.Name = "Pnamecbcb";
+            Pnamecbcb.Size = new Size(305, 53);
+            Pnamecbcb.TabIndex = 169;
+            Pnamecbcb.Text = "Patient Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(404, 25);
+            label2.Location = new Point(335, 25);
             label2.Name = "label2";
-            label2.Size = new Size(239, 27);
-            label2.TabIndex = 141;
-            label2.Text = "Search Appointment";
+            label2.Size = new Size(171, 27);
+            label2.TabIndex = 167;
+            label2.Text = "Search Report";
             // 
             // ReportSearchCb
             // 
@@ -246,7 +248,7 @@
             ReportSearchCb.Location = new Point(22, 105);
             ReportSearchCb.Name = "ReportSearchCb";
             ReportSearchCb.Size = new Size(1337, 48);
-            ReportSearchCb.TabIndex = 139;
+            ReportSearchCb.TabIndex = 165;
             // 
             // label3
             // 
@@ -255,9 +257,9 @@
             label3.ForeColor = Color.Blue;
             label3.Location = new Point(211, 25);
             label3.Name = "label3";
-            label3.Size = new Size(156, 27);
-            label3.TabIndex = 138;
-            label3.Text = "Appointment";
+            label3.Size = new Size(87, 27);
+            label3.TabIndex = 164;
+            label3.Text = "Report";
             label3.Click += label3_Click;
             // 
             // deltebtn
@@ -267,7 +269,7 @@
             deltebtn.Location = new Point(184, 25);
             deltebtn.Name = "deltebtn";
             deltebtn.Size = new Size(25, 27);
-            deltebtn.TabIndex = 137;
+            deltebtn.TabIndex = 163;
             deltebtn.Text = ">";
             // 
             // ContralPanel
@@ -278,7 +280,7 @@
             ContralPanel.Location = new Point(0, 25);
             ContralPanel.Name = "ContralPanel";
             ContralPanel.Size = new Size(178, 27);
-            ContralPanel.TabIndex = 136;
+            ContralPanel.TabIndex = 162;
             ContralPanel.Text = "Controal Panel";
             ContralPanel.Click += ContralPanel_Click;
             // 
@@ -288,8 +290,8 @@
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 1016);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1704, 39);
-            panel2.TabIndex = 135;
+            panel2.Size = new Size(1782, 39);
+            panel2.TabIndex = 161;
             // 
             // panel1
             // 
@@ -297,18 +299,18 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1704, 13);
-            panel1.TabIndex = 134;
+            panel1.Size = new Size(1782, 13);
+            panel1.TabIndex = 160;
             // 
             // editbtn
             // 
             editbtn.BackColor = Color.Blue;
             editbtn.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             editbtn.ForeColor = Color.White;
-            editbtn.Location = new Point(1098, 843);
+            editbtn.Location = new Point(1106, 918);
             editbtn.Name = "editbtn";
             editbtn.Size = new Size(221, 48);
-            editbtn.TabIndex = 145;
+            editbtn.TabIndex = 171;
             editbtn.Text = "E D I T ";
             editbtn.UseVisualStyleBackColor = false;
             // 
@@ -316,10 +318,10 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(373, 25);
+            label13.Location = new Point(304, 25);
             label13.Name = "label13";
             label13.Size = new Size(25, 27);
-            label13.TabIndex = 142;
+            label13.TabIndex = 168;
             label13.Text = ">";
             // 
             // searchbtn
@@ -330,16 +332,40 @@
             searchbtn.Location = new Point(1365, 105);
             searchbtn.Name = "searchbtn";
             searchbtn.Size = new Size(221, 48);
-            searchbtn.TabIndex = 140;
+            searchbtn.TabIndex = 166;
             searchbtn.Text = "S E A R C H";
             searchbtn.UseVisualStyleBackColor = false;
             searchbtn.Click += searchbtn_Click;
             // 
-            // searchappoiments
+            // label10
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1704, 1055);
+            label10.AutoSize = true;
+            label10.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Location = new Point(41, 767);
+            label10.Name = "label10";
+            label10.Size = new Size(236, 40);
+            label10.TabIndex = 187;
+            label10.Text = "Prescription -";
+            // 
+            // Prescriptioncb
+            // 
+            Prescriptioncb.AutoSize = true;
+            Prescriptioncb.BackColor = SystemColors.Control;
+            Prescriptioncb.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Prescriptioncb.Location = new Point(41, 807);
+            Prescriptioncb.Name = "Prescriptioncb";
+            Prescriptioncb.Size = new Size(0, 35);
+            Prescriptioncb.TabIndex = 186;
+            // 
+            // searchreport
+            // 
+            AllowDrop = true;
+            AutoScaleMode = AutoScaleMode.None;
+            AutoScroll = true;
+            AutoSize = true;
+            ClientSize = new Size(1782, 1055);
+            Controls.Add(label10);
+            Controls.Add(Prescriptioncb);
             Controls.Add(label5);
             Controls.Add(label6);
             Controls.Add(label7);
@@ -347,15 +373,15 @@
             Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(Contactcb);
-            Controls.Add(agentcb);
+            Controls.Add(datecb);
             Controls.Add(DNamecb);
-            Controls.Add(Datecb);
+            Controls.Add(DOBcb);
             Controls.Add(Gendercb);
             Controls.Add(label9);
-            Controls.Add(statuscb);
-            Controls.Add(FullNamecb);
+            Controls.Add(diagnosiscb);
+            Controls.Add(Bloodcb);
             Controls.Add(deletebtn);
-            Controls.Add(Anumbercb);
+            Controls.Add(Pnamecbcb);
             Controls.Add(label2);
             Controls.Add(ReportSearchCb);
             Controls.Add(label3);
@@ -367,7 +393,8 @@
             Controls.Add(label13);
             Controls.Add(searchbtn);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "searchappoiments";
+            Name = "searchreport";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MediLink";
             TopMost = true;
             WindowState = FormWindowState.Maximized;
@@ -384,15 +411,16 @@
         private Label label4;
         private Label label1;
         private Label Contactcb;
-        private Label agentcb;
+        private Label datecb;
         private Label DNamecb;
-        private Label Datecb;
+        private Label DOBcb;
         private Label Gendercb;
         private Label label9;
-        private Label statuscb;
-        private Label FullNamecb;
+        private Label diagnosiscb;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Label Bloodcb;
         private Button deletebtn;
-        private Label Anumbercb;
+        private Label Pnamecbcb;
         private Label label2;
         private ComboBox ReportSearchCb;
         private Label label3;
@@ -400,9 +428,10 @@
         private Label ContralPanel;
         private Panel panel2;
         private Panel panel1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Button editbtn;
         private Label label13;
         private Button searchbtn;
+        private Label label10;
+        private Label Prescriptioncb;
     }
 }

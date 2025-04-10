@@ -26,7 +26,7 @@ namespace Hospital_Management_System
 
         private void patients_Click(object sender, EventArgs e)
         {
-            Patients obj = new Patients();
+            Pview obj = new Pview();
             obj.Show();
             this.Hide();
         }
@@ -40,7 +40,7 @@ namespace Hospital_Management_System
 
         private void label1_Click(object sender, EventArgs e)
         {
-            Patients obj = new Patients();
+            Pview obj = new Pview();
             obj.Show();
             this.Hide();
         }
@@ -68,14 +68,14 @@ namespace Hospital_Management_System
 
         private void report_Click(object sender, EventArgs e)
         {
-            Report obj = new Report();
+            Rview obj = new Rview();
             obj.Show();
             this.Hide();
         }
 
         private void reportslbl_Click(object sender, EventArgs e)
         {
-            Report obj = new Report();
+            Rview obj = new Rview();
             obj.Show();
             this.Hide();
         }

@@ -44,12 +44,12 @@ namespace Hospital_Management_System
                         StaffTbl E ON A.Member_Of_Counter = E.Staff_ID";
 
                 DataTable dt = Con.GetData(Query);
-                AppointmentSearchCb.DataSource = dt;
-                AppointmentSearchCb.DisplayMember = "PatientFullName"; // You can change this to "DoctorFullName" if you want
-                AppointmentSearchCb.ValueMember = "Appoiment_ID";
+                ReportSearchCb.DataSource = dt;
+                ReportSearchCb.DisplayMember = "PatientFullName"; // You can change this to "DoctorFullName" if you want
+                ReportSearchCb.ValueMember = "Appoiment_ID";
 
-                AppointmentSearchCb.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                AppointmentSearchCb.AutoCompleteSource = AutoCompleteSource.ListItems;
+                ReportSearchCb.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                ReportSearchCb.AutoCompleteSource = AutoCompleteSource.ListItems;
             }
             catch (Exception ex)
             {
@@ -124,7 +124,7 @@ namespace Hospital_Management_System
 
         private void searchbtn_Click(object sender, EventArgs e)
         {
-            string Appoiment_ID = AppointmentSearchCb.SelectedValue?.ToString();
+            string Appoiment_ID = ReportSearchCb.SelectedValue?.ToString();
             if (string.IsNullOrEmpty(Appoiment_ID))
             {
                 MessageBox.Show("Please select a valid appointment.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -145,6 +145,7 @@ namespace Hospital_Management_System
                 string date = row["Date"].ToString();
                 string agent = row["Member_Of_Counter"].ToString();
                 string contact = row["Contact_Number"].ToString();
+
 
                 // Get the doctor's full name using the helper method
                 string doctorName = GetDoctorName(doctorId);
@@ -176,7 +177,7 @@ namespace Hospital_Management_System
         {
             try
             {
-                string Appoiment_ID = AppointmentSearchCb.SelectedValue.ToString();
+                string Appoiment_ID = ReportSearchCb.SelectedValue.ToString();
                 string Query = $"Delete from AppoimentTbl WHERE Appoiment_ID = '{Appoiment_ID}'";
                 DataTable dt = Con.GetData(Query);
                 MessageBox.Show("Doctor delete sucess");
