@@ -210,6 +210,7 @@
             account.Size = new Size(347, 191);
             account.TabIndex = 19;
             account.UseVisualStyleBackColor = true;
+            account.Click += account_Click;
             // 
             // userlbl
             // 
@@ -233,6 +234,7 @@
             users.Size = new Size(347, 191);
             users.TabIndex = 17;
             users.UseVisualStyleBackColor = true;
+            users.Click += users_Click;
             // 
             // appointments
             // 

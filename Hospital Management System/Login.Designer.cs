@@ -40,6 +40,7 @@
             label5 = new Label();
             Passwordbox = new TextBox();
             loginbtn = new Button();
+            userinputpage = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -113,7 +114,7 @@
             emailbox.Font = new Font("Arial", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             emailbox.Location = new Point(36, 453);
             emailbox.Name = "emailbox";
-            emailbox.PlaceholderText = "Admin@mail.com";
+            emailbox.PlaceholderText = "Admin";
             emailbox.Size = new Size(482, 50);
             emailbox.TabIndex = 44;
             // 
@@ -153,6 +154,7 @@
             // 
             loginbtn.BackColor = Color.Blue;
             loginbtn.Font = new Font("Arial", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            loginbtn.ForeColor = Color.White;
             loginbtn.Location = new Point(36, 696);
             loginbtn.Name = "loginbtn";
             loginbtn.Size = new Size(482, 52);
@@ -161,11 +163,25 @@
             loginbtn.UseVisualStyleBackColor = false;
             loginbtn.Click += loginbtn_Click;
             // 
+            // userinputpage
+            // 
+            userinputpage.AutoSize = true;
+            userinputpage.BackColor = Color.Transparent;
+            userinputpage.Font = new Font("Arial", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            userinputpage.Location = new Point(36, 771);
+            userinputpage.Name = "userinputpage";
+            userinputpage.Size = new Size(385, 42);
+            userinputpage.TabIndex = 49;
+            userinputpage.Text = "Create a New Account";
+            userinputpage.Click += userinputpage_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(1704, 916);
+            Controls.Add(userinputpage);
             Controls.Add(loginbtn);
             Controls.Add(label5);
             Controls.Add(Passwordbox);
@@ -200,5 +216,6 @@
         private Label label5;
         private TextBox Passwordbox;
         private Button loginbtn;
+        private Label userinputpage;
     }
 }

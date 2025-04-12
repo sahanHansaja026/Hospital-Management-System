@@ -45,40 +45,21 @@ namespace Hospital_Management_System
         }
 
 
-      
-        public int ExecuteScalar(string query, Dictionary<string, object> parameters)
+
+        public object Executescalar(String Query, SqlParameter[] parameters)
         {
-            int result = 0;
-            try
+            using (SqlConnection con = new SqlConnection(ConStr))
             {
-                if (con.State == ConnectionState.Closed)
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(Query, con))
                 {
-                    con.Open();
-                }
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    // Add parameters to prevent SQL injection
-                    foreach (var param in parameters)
+                    if (parameters != null)
                     {
-                        cmd.Parameters.AddWithValue(param.Key, param.Value);
+                        cmd.Parameters.AddRange(parameters);
                     }
-
-                    // Execute the query and retrieve the result
-                    object count = cmd.ExecuteScalar();
-                    result = (count != null) ? Convert.ToInt32(count) : 0;
+                    return cmd.ExecuteScalar();
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-
-            return result;
         }
 
     }

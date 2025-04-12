@@ -35,8 +35,11 @@
             label2 = new Label();
             label3 = new Label();
             button1 = new Button();
+            pictureBox3 = new PictureBox();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -108,12 +111,34 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(1553, 827);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(112, 86);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 9;
+            pictureBox3.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(1671, 872);
+            label4.Name = "label4";
+            label4.Size = new Size(179, 35);
+            label4.TabIndex = 10;
+            label4.Text = "1.0.0 verson";
+            // 
             // Landing
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DodgerBlue;
-            ClientSize = new Size(1704, 916);
+            ClientSize = new Size(1924, 916);
+            Controls.Add(label4);
+            Controls.Add(pictureBox3);
             Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -127,6 +152,7 @@
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -139,5 +165,7 @@
         private Label label2;
         private Label label3;
         private Button button1;
+        private PictureBox pictureBox3;
+        private Label label4;
     }
 }

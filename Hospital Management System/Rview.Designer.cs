@@ -74,6 +74,7 @@
             ContralPanel.Size = new Size(178, 27);
             ContralPanel.TabIndex = 129;
             ContralPanel.Text = "Controal Panel";
+            ContralPanel.Click += ContralPanel_Click;
             // 
             // panel2
             // 

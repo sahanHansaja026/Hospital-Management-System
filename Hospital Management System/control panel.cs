@@ -107,5 +107,19 @@ namespace Hospital_Management_System
             obj.Show();
             this.Hide();
         }
+
+        private void users_Click(object sender, EventArgs e)
+        {
+            users obj = new users();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void account_Click(object sender, EventArgs e)
+        {
+            Error obj = new Error();
+            obj.Show();
+            this.Hide();
+        }
     }
 }
